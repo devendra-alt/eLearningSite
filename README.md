@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 # node Module
-to use node `ng install` in project directory
+to add node module `ng install` in project directory
 
 ## Development server
 
