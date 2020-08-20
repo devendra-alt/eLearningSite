@@ -119,10 +119,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "eLearningSite",
-  "cli": {
-    "analytics": "2e7cba20-2de0-4135-a962-30fd0b37b8e9"
-  }
+    }},
+  "defaultProject": "eLearningSite"
 }
