@@ -10,8 +10,10 @@ form {
   }
   
   body{
+    display: flex;
+    justify-content: center;
     background-color: #4caf4fc5;
-    height: 550px;
+    height: 900px;
     width: 100%fit-content;
     padding-top: 50px;
     margin-left: auto;
