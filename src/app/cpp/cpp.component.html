@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="sidebar">
+  <ul class=" nav nav-pills">
+    <li [class.active]="viewMode=='home'"><a (click)="viewMode='home'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="goToTop()" >C++ Introduction</a></li>
+    <li [class.active]="viewMode=='news'"><a (click)="viewMode='news'" (click)="goToTop()">C++ Concepts</a></li>
+    <li [class.active]="viewMode=='contact'"><a (click)="viewMode='contact'" (click)="goToTop()">C++ Syntax</a></li>
+    <li [class.active]="viewMode=='about'"><a (click)="viewMode='about'" (click)="goToTop()">C++ Comments </a></li>
+  
+</ul>
+</div>
+<div class="content" [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'home'" ><h1 style="font-size: 35px; padding-top: 20px;">C++ Introduction</h1>
+    <br>
+    <hr>
+    <br>
+    <h2 style="font-size: 25px; font-weight: 400;" >What is C++?</h2>
+    <ul>
+      <li>C++ is a cross-platform language that can be used to create high-performance applications.
+      </li><br>
+      <li style="padding-top: 10px;">C++ was developed by Bjarne Stroustrup, as an extension to the C language.
+      </li><br>
+      <li style="padding-top: 10px;">C++ gives programmers a high level of control over system resources and memory.
+      </li><br>
+      <li style="padding-top: 10px; padding-bottom: 10px;">The language was updated 3 major times in 2011, 2014, and 2017 to C++11, C++14, and C++17.
+      </li>
+    </ul>
+  <br>
+   <hr>
+   <br>
+   <h2 style="font-size: 25px; font-weight: 400;" >Why Use C++ ?</h2>
+   <ul type="cicle"> 
+     <li>C++ is one of the world's most popular programming languages.
+    </li><br>
+     <li style="padding-top: 10px;">C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.
+     </li><br>
+     <li style="padding-top: 10px;">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.
+     </li><br>
+     <li style="padding-top: 10px; padding-bottom: 10px;">C++ is portable and can be used to develop applications that can be adapted to multiple platforms.
+     </li>
+     <li style="padding-top: 10px; padding-bottom: 10px;">C++ is fun and easy to learn!
+     </li><br>
+     <li style="padding-top: 10px; padding-bottom: 10px;">As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa.
+    </li>
+   </ul>
+  </div>
+
+  <div *ngSwitchCase="'news'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;">C++ Concepts</h1>
+    <br>
+    <hr>
+    <ul>
+      <li>
+        Encapsulation
+      </li><br>
+      <li>
+        Abstraction
+      </li><br>
+      
+      <li>
+        Polymorphism
+      </li><br>
+      <li>
+        Inheritance
+      </li><br>
+    </ul>
+    <br>
+    <img src="./assets/oops.png" style="padding-left: 230px;">
+    <br>
+    <br>
+    <hr>
+    <h1 style="font-size: 35px; padding-top: 13px;">Encapsulation</h1>
+    <br>
+    <ul>
+      <li>
+        Encapsulation is placing the data and the functions that work on
+        that data in the same place.
+      </li><br>
+      <li>Binding (or wrapping) code and data together into a single unit is
+        known as encapsulation.
+      </li><br>
+      <li>For example: capsule, it is wrapped with different medicines.
+      </li><br>
+    </ul>
+    <br>
+    <img src="./assets/encap.png" style="padding-left: 370px;">
+    <br>
+    <br>
+    <hr>
+
+    <h1 style="font-size: 35px; padding-top: 13px;">Abstraction</h1>
+    <br>
+    <ul>
+      <li>
+        Data abstraction refers to, providing only essential information to
+the outside world and hiding their background details, i.e., to
+represent the needed information in program without presenting
+the details.
+      </li><br>
+      <li>Hiding internal details and showing functionality is known as
+        abstraction.
+      </li><br>
+      <li>For example: phone call, we don't know the
+        internal processing, ATM Machine
+      </li><br>
+    </ul>
+    <br>
+    <img src="./assets/abs.png" style="padding-left: 370px;">
+    <br>
+    <br>
+    <hr>
+
+    <h1 style="font-size: 35px; padding-top: 13px;">Abstraction</h1>
+    <br>
+    <ul>
+      <li>
+        Ability to take more than one form.
+      </li><br>
+      <li>When one task is performed by different ways i.e. known as
+        polymorphism.</li><br>
+      <li>In oops, we use method overloading and method overriding to
+        achieve polymorphism.</li><br>
+        <li>
+          Example to speak something e.g. cat speaks meaw, dog barks
+          woof etc.
+        </li><br>
+    </ul>
+    <br>
+    <img src="./assets/poly.png" style="padding-left: 370px;">
+    <br>
+    <br>
+    <hr>
+
+
+    <h1 style="font-size: 35px; padding-top: 13px;">Inheritance</h1>
+    <br>
+    <ul>
+   
+      <li>When one object acquires all the properties and behaviours of
+        parent object i.e. known as inheritance.</li><br>
+        <li>It provides code reusability. Inheritance is the process of forming a
+          new class from an existing class that is from the existing class
+          called as base class, new class is formed called as derived class.
+          Example to speak something e.g. cat speaks meaw, dog barks
+          woof etc.
+        </li><br>
+        <li>
+          Syntax: class derived-class: access-specifier base-class
+        </li><br>
+    </ul>
+    <br>
+    <img src="./assets/inheri.png" style="padding-left: 370px;">
+    <br>
+    <br>
+    <hr>
+  </div>
+
+  <div *ngSwitchCase="'contact'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;">C++ Syntax</h1>
+    <br>
+   <h3> Let's break up the following code to understand it better:
+  </h3>
+
+  
+  <fieldset style="width: 800px; height: 300px; padding-bottom: 10px;" class="zoom">
+    <legend>
+      <h2>Example</h2>
+    </legend>
+    <table>
+            <tr>
+           <td>       
+                <div>
+                  <pre>       
+                  <code> 
+                        #include &lt;iostream&gt;
+                          using namespace std;
+                          <samp style="color: royalblue;">int</samp> main() &#123;	
+                            cout &lt;&lt;  <samp style="color:red;">"Hello World!"</samp>;
+                            <samp style="color: royalblue;">return</samp> <samp style="color:red;">0</samp>;
+                            &#125;          
+                </code>
+              </pre>
+           </div>
+         </td>
+      </tr>
+    </table>			
+  </fieldset>
+<br>
+<h3> At the time of <b>compilation the source code
+  (program) are to be translated into object codes.</b>
+  These object code are sutiable for execution by the
+  computer.
+</h3>
+<br>
+<h3>For compilation of program we need to write<br></h3>
+
+  <h3 style="font-weight: bold;">“g++ programname.cpp”</h3>
+</div>
+
+
+
+
+
+
+
+  <div *ngSwitchCase="'about'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;">C++ Comments</h1>
+    <br>
+    <hr>
+    <br>
+    <h2 style="font-size: 25px; font-weight: 400;" >C++ Comments</h2>     
+    <ul>
+      <li>Comments can be used to explain C++ code, and to make it more readable. It can also be used to prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.
+      </li><br>
+        <li>Single-line comments start with two forward slashes (<samp style="color: red;">/ /</samp>).
+        </li><br>
+        <li>
+          Any text between <samp style="color: red;">/ /</samp> and the end of the line is ignored by the compiler (will not be executed).
+        </li><br>
+        <li>
+          This example uses a single-line comment before a line of code:
+        </li>
+        <br>
+    </ul>
+    <br>
+    <fieldset style="width: 800px; height: 200px; padding-bottom: 10px;" class="zoom">
+      <legend>
+        <h2>Example</h2>
+      </legend>
+      <table>
+              <tr>
+             <td>       
+                  <div>
+                    <pre>       
+                    <code>
+                      <samp style="color: green;">// This is a Comment</samp> 
+                      cout &lt;&lt;  <samp style="color:red;">"Hello World!"</samp>;                          
+                  </code>
+                </pre>
+             </div>
+           </td>
+        </tr>
+      </table>			
+    </fieldset>
+  <br>
+  <hr>  
+  <h2 style="font-size: 25px; font-weight: 400;" >C++ Multi-line Comments</h2>     
+    <br>
+    <ul>
+      <li>Multi-line comments start with <samp style="color:red;">/*</samp> and ends with <samp style="color:red ;">*/</samp>.
+      </li><br>
+        <li>Any text between <samp style="color:red;">/*</samp> and <samp style="color:red ;">*/</samp> will be ignored by the compiler:
+        </li>
+        <br>
+    </ul>
+    <br>
+    
+    <br>
+    <fieldset style="width: 800px; height: 270px; padding-bottom: 10px;" class="zoom">
+      <legend>
+        <h2>Example</h2>
+      </legend>
+      <table>
+              <tr>
+             <td>       
+                  <div>
+                    <pre>       
+                    <code>
+                      <samp style="color: green;">
+                        /* The code below will print the words Hello World!
+                        to the screen, and it is amazing */
+                      </samp> 
+                        cout &lt;&lt;  <samp style="color:red;">"Hello World!"</samp>;                          
+                  </code>
+                </pre>
+             </div>
+           </td>
+        </tr>
+      </table>			
+    </fieldset>  
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div *ngSwitchDefault> other</div>
+
+</div>
+
+</body>
+</html>

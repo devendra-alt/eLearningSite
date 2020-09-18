@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="sidebar">
+  <ul class=" nav nav-pills">
+    <li [class.active]="viewMode=='home'"><a (click)="viewMode='home'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="goToTop()" >Angular Introduction</a></li>
+    <li [class.active]="viewMode=='news'"><a (click)="viewMode='news'" (click)="goToTop()">Architecture Of Angular</a></li>
+    <li [class.active]="viewMode=='contact'"><a (click)="viewMode='contact'" (click)="goToTop()">Angular app using CLI.</a></li>
+    <li [class.active]="viewMode=='about'"><a (click)="viewMode='about'" (click)="goToTop()"> Angular CLI commands
+    </a></li>
+  
+</ul>
+</div>
+<div class="content" [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'home'" >
+  <h1 style="font-size: 35px; padding-top: 20px;">Angular Introduction</h1>
+  <br>
+  <hr>
+  <br>
+  <h2 style="font-size: 25px; font-weight: 400;" >What is Anguar?</h2>
+  <ul type="bullet">
+    <li>Angular is a platform and framework for building single-page client applications using HTML and TypeScript. </li><br>
+    <li style="padding-top: 10px;">Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.</li>
+    <br>
+  </ul>
+ <hr>
+ <h2 style="font-size: 25px; font-weight: 400; padding-top: 10px;" >Why Angular?</h2>
+  <ul type="bullet">
+    <li style="padding-bottom: 10px;">Why we need to learn Angular? We can do the same in JavaScript or jQuery. Yes, we can complete our most of the task using jQuery.
+    </li><br>
+    <li style="padding-bottom: 10px;">When the application becomes complex in terms of requirements, jQuery becomes hard to maintain the code. Even though we have lots of design patterns for JavaScript, its hard for beginner to start with design patterns.
+    </li><br>
+    <li style="padding-bottom: 10px;">When we create large complex application using jQuery – it becomes hard to test. To make life easier a lots of frameworks arrived in programming world to help the programmers.
+    </li><br>
+  </ul>
+  <hr>
+  <h2 style="font-size: 25px; font-weight: 400; padding-top: 10px;" >Benefits of Angular  </h2>
+  <ul type="bullet">
+    <li style="padding-bottom: 10px;">Its a <b> component based framework </b>which gives a clean structure for our application
+    </li><br>
+    <li style="padding-bottom: 10px;">It has <b> Declarative templates</b> which Includes lots of re-usable code
+    </li><br>
+    <li style="padding-bottom: 10px;"><b> More testable code</b> – supports to build lots of automated test
+    </li><br>
+    <li style="padding-bottom: 10px;">We can write our code in either JavaScript or TypeScript –<b> Angular Framework itself developed using TypeScript</b>
+    </li><br>
+  </ul>
+  <hr>
+   	
+</div>
+
+
+  <div *ngSwitchCase="'news'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;">Architecture Of Angular</h1>
+  <br>
+  <hr>
+  <br>
+  <h2 style="font-size: 25px; font-weight: 400;" >We have two main sections in Architecture  </h2>
+  <ul type="bullet">
+    <li>Front-end
+    </li><br>
+    <li style="padding-top: 10px;">Back-end
+    </li>
+    <br>
+  </ul>
+ <hr><br>
+  <h2> Front-end </h2>
+  <ul>
+    <li>
+  In the front-end, we have built our UI using HTML, CSS, JavaScript or TypeScript. It contains HTML templates, Graphical representation, application presentation logic.
+  </li><br>
+</ul>
+
+<h2> Back-end  </h2>
+<ul>
+  <li>
+<p>Back-end Architecture contains the Business Logic, Data from Database or APIs.  </p>
+</li><br>
+<li>
+<p>In angular, we are not going to store any data in client side because once the session or cookies cleared everything will deleted.  </p>
+</li><br> 
+<li><p>We will use local storage or cookies in client side to store temporary data. The business logic or data are stored in database or APIs.  </p>
+</li><br>
+<img src="./assets/efficens.png" style="padding-left:300px">
+</ul>
+<h2> The key parts available in angular architecture are
+</h2>
+<ul>
+  <li>
+    Modules
+  </li><br>
+  <li>
+    Components
+  </li><br>
+  <li>
+    Templates
+  </li><br>
+  <li>
+    Directives
+  </li><br>
+  <li>
+    Data Binding
+  </li><br>
+  <li>
+    Services
+  </li><br>
+  <li>
+    Dependency Injection
+  </li><br>
+</ul>
+
+  <hr>
+<h2>We can discuss on each topic in upcoming posts.</h2>
+<br>
+<br>
+<img src="./assets/overview2.png" style="padding-left: 200PX;">
+
+</div>
+
+
+
+  <div *ngSwitchCase="'contact'"> 
+  <h1 style="font-size: 35px; padding-top: 20px;">Setting Up The Environment</h1>
+  <br>
+  <hr>
+  <br>
+  <p>
+    In this post, we are going to discuss how to setup development environment and create an initial angular app using CLI.
+  </p>
+  <p>
+    A quick start tool is always helps the developer to save their valuable time and use those time in efficient way on improving the quality of the application.
+  </p>
+  <p>
+    Angular provides us <samp style="color:blue;"> Angular CLI</samp> which is a command line interface tool that can help to create a project, add files, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.
+  </p>
+  <p>
+    Using this CLI, we can create apps with a working condition which uses best practices suggested by Angular Team.
+  </p>
+  <p>
+    To create an Angular application using Angular CLI, all we need is to follow the below steps:
+  </p>
+  <br>
+  <h2>
+    1. Install Node js and npm on your machine
+  </h2>
+  <p>
+    Visit Node.js web page and download installer. Once you’ve installed nodejs, the npm will get installed along with it.
+  </p>
+  <h2>
+    2. Verify the compatible version
+  </h2>
+<p>
+  Angular CLI requires the minimal version of node and npm. But feel free to install the latest edition to explore the latest features.
+</p>
+<br>
+<b> We can check the version of node and npm using following commands.
+</b><br>
+  <b>node -v</b><br>
+  <b>npm -v</b><br>
+  <h2>
+    <br>3. Install Angular CLI
+  </h2>
+  <p>
+    Run the following command to install Angular CLI globally.
+  </p>
+  <br>
+  <b>npm install -g @angular/cli
+  </b>
+  
+  <p>
+    <br>-g flag is used to install the package globally in the npm.
+  </p>
+  <p>
+    Once we installed CLI globally, we can confirm whether the tool installed successfully by using the following command.
+  </p>
+  <br>
+  <b>ng -v </b><br>
+  <h2>
+    <br>StackBlitz
+  </h2>
+  <p>
+    StackBlitz is an online IDE where you can create Angular & React projects that are immediately online & shareable via link… in just one click. It automatically takes care of installing dependencies, compiling, bundling, and hot reloading as you type.
+  </p>
+  <p>
+    StackBlitz is a tool in the <b>Cloud IDE</b>  category of a tech stack.
+  </p>
+  <h2>
+    Additional Reading
+  </h2>
+  <p>
+    Just read this if you really want to get deep insight about npm
+  </p>
+  <br>
+  <p>
+    As a part of learning angular, I would suggest everyone learn and understand the basic concept of npm
+  </p><br>
+  <p>
+    Maybe by finding answers for few of questions listed below
+  </p>
+  <ul>
+    <li>
+      What is npm?
+    </li><br>
+
+    <li>
+      What is the role of npm?
+    </li><br>
+
+    <li>
+      How to use it?
+    </li><br>
+    <li>
+      Why we are going to use it?
+    </li>
+  </ul>
+  <br>
+  <h2>
+    So, what is npm?
+  </h2>
+  <p>
+    npm – node package manager
+  </p>
+  <p>
+    Let’s split the sentence and understand the meaning present in the abbreviation.
+  </p>
+  
+  <h2>
+    Node
+  </h2>
+  <p>
+    Here node.js is mentioned as the node. Node.js is a server-side JavaScript environment. It uses an asynchronous event-driven model and is designed for writing scalable Internet applications, notably web servers.
+  </p>
+  
+  <h2>
+    <br>
+    Package
+  </h2>
+  <p>
+    Modules of code grouped up into a component which can be used in various project or application.
+  </p>
+  <h2>
+    <br>
+    Manager
+  </h2>
+  <p>
+    Managing the dependencies with the various operation like install, uninstall, update and so on. 
+  </p>
+  <p>
+    Now, we can frame our own definition for npm from above split up an explanation. So using npm, we can manage (install, uninstall, organize) the node.js packages in our project.
+  </p>
+  <p>
+    npm is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js.
+  </p>
+  <p>
+    npm has CLI terminal and website to search for packages.
+  </p>
+   <h1>What is the role of npm?  </h1>
+    <p>
+      npm does N number of roles in various projects. I’m just mentioning the various steps which we are going to use in our upcoming posts in the end user developer point of view
+    </p>
+    <br>
+    <ul>
+      <li>
+        install packages
+      </li><br>
+      <li>
+      uninstall packages
+    </li>        <br>
+      <li>
+        version maintenance of packages across the team
+
+      </li><br>
+      <li>
+maintaining the dependencies
+
+      </li><br>   
+    </ul>
+    <h2>
+      Simple, install Node.js
+    </h2>
+    <p>
+      npm is distributed with Node.js- which means that when we download and install Node.js, we automatically get npm installed on our computer.
+    </p>
+    <p>
+      Using following command in terminal, we can check whether our toolset get installed successfully,
+    </p>
+     <br>
+     <code>
+      // to check node.js version
+      node -v
+      <br><br>
+      // to check npm version
+      npm -v
+     </code> 
+     <br>
+     <h2>
+      <br>packages.json
+     </h2>
+     <p>
+      What is this packages.json? this is one of the important things we should get familiar if we are going for use npm in our projects.
+     </p>
+     <ul>
+       <li>
+        packages.json file is like the registry of packages in our project.
+       </li><br>
+       <li>
+        it lists the packages that our project depends on.
+       </li><br>
+       <li>
+        allows us to specify the versions of a package that our project can use using semantic versioning rules.
+        </li>
+     </ul>
+     <br>
+     <h3>
+      How to create packages.json file?
+     </h3>
+     <p>
+      Open terminal with your target folder location.
+     </p>
+     <p>
+      Type <b> npm init</b> and Enter, now you’ll be caught up with few questions. After you have answered most of the question, your file will get created.
+     </p>
+     <p>
+      name and version fields are mandatory fields.
+     </p>
+     <br>
+     <img src="./assets/npm_cmd.png" style="padding-left: 20px;">
+     <br>
+     <h2>npm init</h2>
+     <p>
+      If you are afraid of questions, we have another quick option.
+     </p>
+     <p>
+      Enter command <b> npm init –yes</b>
+     </p>
+     <img src="./assets/npm_cmd_2.png" style="padding-left: 20px;">
+     <br>
+     <h2>
+      npm init –yes 
+     </h2>
+     <p>
+      Using –yes argument option, the npm will create packages.json file with default values.
+     </p>
+     <h1>
+      Install a package
+     </h1>
+     <p><samp style="color:red;"> npm install</samp> (in the package directory, no arguments) – Install the dependencies in the local node_modules folder.    </p>
+     <p>
+      In global mode (ie, with  <samp style="color:red;"> -g</samp> or <samp style="color:red;">--global</samp> appended to the command), it installs the current package context (ie, the current working directory) as a global package.
+     </p>
+     <p>
+      You can find detailed details of npm install options in this link
+     </p>
+     <p>
+      A package can be downloaded with the command:
+     </p>
+     <p>
+       <b>
+        npm install &lt;package_name&gt;
+       </b>
+     </p>
+     <br>
+     <h1>
+      Setup
+     </h1>
+     <p>
+      Once you have setup the basic software like node.js and npm. You can download CLI using the following command
+     </p><br>
+     <p><b>1
+      npm install -g @angular/cli
+      </b></p>
+      <p>
+        Once installed we can check the version of angular CLI using the following command
+      </p>
+      <br>
+      <p>
+        <b>
+          ng version
+        </b>
+      </p>
+      <p>
+        One common arguments every CLI has is help command. Here it is for you
+      </p>
+      <p>
+        <b>
+          ng help
+        </b>
+      </p>
+</div>
+
+  <div *ngSwitchCase="'about'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;"> Angular CLI commands
+    </h1>
+  <br>
+  <hr>
+  <br>
+  <p>Available angular CLI commands By using command ng help, I’m getting the following information  </p>
+  <br>
+  <img src="./assets/image.png" style="padding-left: 20px;">
+  <p>ng help</p>
+   <br>
+   <ul>
+     <li>
+       <b>add</b>-Adds support for an external library to your project.
+     </li><br>
+     <li>
+      <b>analytics</b>-Configures the gathering of Angular CLI usage metrics. See <Samp style="color: blue;"> https://v8.angular.io/cli/usage-analytics-gathering..</Samp>
+    </li><br>
+    <li>
+      <b>build (b)</b>-Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
+    </li><br>
+     <li>
+      <b>deploy</b>- Invokes the deploy builder for a specified project or for the default project in the workspace.
+     </li><br>
+     <li>
+      <b>config</b>-Retrieves or sets Angular configuration values in the angular.json file for the workspace.
+     </li><br>
+     <li>
+      <b>doc (d) </b>- Opens the official Angular documentation (angular.io) in a browser, and searches for a given keyword.
+     </li><br>
+     <li>
+      <b>e2e (e)</b>- Builds and serves an Angular app, then runs end-to-end tests using Protractor.
+     </li><br>
+      <li>
+        <b>generate (g) </b>-Generates and/or modifies files based on a schematic.
+      </li><br>
+      <li>
+        <b>help</b>-  Lists available commands and their short descriptions..
+       </li><br>
+       <li>
+        <b>lint (l)</b>-Runs linting tools on Angular app code in a given project folder.
+       </li><br>
+       <li>
+        <b>new (n)</b>-Creates a new workspace and an initial Angular app.
+       </li><br>
+       <li>
+        <b>run</b>-Runs an Architect target with an optional custom builder configuration defined in your project.
+       </li><br>
+       <li>
+        <b>serve (s) </b>-Builds and serves your app, rebuilding on file changes.
+       </li><br>
+       <li>
+        <b>test (t)</b>-Runs unit tests in a project.
+       </li><br>
+       <li>
+        <b>update</b>-Updates your application and its dependencies. See <samp style="color: blue;"> https://update.angular.io/</samp>
+       </li><br>
+       <li>
+        <b>version (v)</b>- Outputs Angular CLI version.
+       </li><br>
+       <li>
+        <b>xi18n </b>(i18n-extract) – Extracts i18n messages from source code.
+       </li><br>
+    </ul>   
+    <br>
+    <h1 style="font-size: 35px; padding-top: 20px;"> Creating new angular project.</h1>
+  <br>
+  <b>ng new timer-project
+  </b>
+  <br>
+  <img src="./assets/image-2.png" style="padding-left: 5px;">
+  <p>ng new</p>
+  <p><b>timer-project</b> is name of project we chose.
+  </p>
+  <p>
+    The CLI asks us choose our required options based on our needs. Like routing and stylesheet type.
+  </p>
+  <p>
+    After installing package, we are good to go with debugging of the newly generated application. We can discuss about the project structure in our upcoming post.
+  </p>
+  <p>
+    You can checkout some of our other posts related to angular CLI
+  </p>
+  <h1 style="font-size: 35px; padding-top: 20px;"> Serving the project  </h1>
+    <br>
+  <p>
+    Angular CLI provides a complete tool-chain for developing front-end apps on your local machine. As such, you don’t need to install a local server to serve your project — you can simply, use the ng serve command from your terminal to serve your project locally.
+  </p>
+  <p>
+    <b>
+      ng serve
+    </b>
+  </p>
+  <p>
+    The application will start serving in the root <samp style="color: blue;"> http://localhost:4200</samp>
+  </p>
+  <h1 style="font-size: 35px; padding-top: 20px;"> Generating angular schematic
+  </h1>
+  <br>
+  <p>
+    <b>Generates and/or modifies files based on a schematic.</b>
+  </p>
+  <br>
+  <b>ng generate &lt;schematic&gt; [options]</b>
+  <b>ng g &lt;schematic&gt; [options]</b>
+  <br>
+  <ul>
+ <li>
+      appShell
+    </li><br>
+    <li>
+      application
+    </li><br><li>
+      class
+    </li><br><li>
+      appShellcomponent
+    </li><br><li>
+      directive
+    </li><br><li>
+      enum
+    </li><br><li>
+      guard
+    </li><br><li>
+      interceptor
+    </li><br><li>
+      interface
+    </li><br><li>
+      library
+    </li><br><li>
+      module
+    </li><br>
+    <li>
+      pipe
+    </li><br>
+    <li>
+      service
+    </li><br>
+    <li>
+      serviceWorker
+    </li><br>
+    <li>
+      webWorker
+    </li><br> 
+
+  </ul>
+<p>  These commands is fair to start using angular CLI in beginner mode.
+</p>
+
+</div>
+  <div *ngSwitchDefault> other</div>
+
+</div>
+
+</body>
+</html>
