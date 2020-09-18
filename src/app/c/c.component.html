@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="sidebar">
+  <ul class=" nav nav-pills">
+    <li [class.active]="viewMode=='home'"><a (click)="viewMode='home'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="goToTop()" >Css Introduction</a></li>
+    <li [class.active]="viewMode=='news'"><a (click)="viewMode='news'" (click)="goToTop()">Css Syntax</a></li>
+    <li [class.active]="viewMode=='contact'"><a (click)="viewMode='contact'" (click)="goToTop()">Css Selectors</a></li>
+    <li [class.active]="viewMode=='about'"><a (click)="viewMode='about'" (click)="goToTop()">Css How To Add</a></li>
+  
+</ul>
+</div>
+<div class="content" [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'home'" ><h1 style="font-size: 35px; padding-top: 20px;">Css Introduction</h1>
+  <br>
+  <hr>
+  <br>
+  <h2 style="font-size: 25px; font-weight: 400;" >What is Css?</h2>
+  <ul type="bullet">
+    <li><b>CSS </b>  <b>S</b>tands <b>C</b>ascading <b>S</b>tyle <b>S</b>heets.</li>
+    <li style="padding-top: 10px;">CSS <b>describes how HTML elements are to be displayed on screen, paper, or in other media.</b></li>
+    <li style="padding-top: 10px;">CSS <b>saves a lot of work.</b> It can control the layout of multiple web pages all at once.</li>
+    <li style="padding-top: 10px; padding-bottom: 10px;">External stylesheets are stored in <b>CSS files</b></li>
+  </ul>
+ <hr>
+ <h2 style="font-size: 25px; font-weight: 400; padding-top: 10px;" >Why Css?</h2>
+  <ul type="bullet">
+    <li style="padding-bottom: 10px;"><b>CSS saves time :</b>  You can write CSS once and reuse same sheet in multiple HTML pages.</li>
+    <li style="padding-bottom: 10px;"><b>Easy Maintainence :</b>  To make a global change simply change the style, and all elements in all the webpages will be updated automatically.</li>
+    <li style="padding-bottom: 10px;"><b>Search Engines :</b>CSS is considered as clean coding technique, which means search engines won’t have to struggle to “read” its content.</li>
+    <li style="padding-bottom: 10px;"><b>Superior styles to HTML :</b>CSS has a much wider array of attributes than HTML, so you can give a far better look to your HTML page in comparison to HTML attributes.</li>
+    <li style="padding-bottom: 10px;"><b>Offline Browsing :</b>CSS can store web applications locally with the help of offline catche.Using of this we can view offline websites.</li>
+  </ul>
+  <hr>
+ <h2 style="font-size: 25px; font-weight: 400; padding-top: 10px;" >Example:</h2>
+
+  			<fieldset style="width: 1060px; height: 520px;">
+        <legend><h1>Css Example</h1></legend>
+				<table class="zoom">
+					<tr>
+               <td>       
+                    <div>
+                      <pre>
+                        
+                      <code>
+                        {{"
+                      body {
+                        background-color: lightblue;
+                      }
+                      
+                      h1 {
+                        color: white;
+                        text-align: center;
+                      }
+                      
+                      p {
+                        font-family: verdana;
+                        font-size: 20px;
+                      }
+                    "}}
+                    </code>
+                  </pre>
+               </div>
+             </td>
+          </tr>
+				</table>			
+      </fieldset>
+   
+  	
+</div>
+
+
+  <div *ngSwitchCase="'news'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;">Css Syntax</h1>  
+    <br>
+    <hr>
+    <br>
+    <h2 style="font-size: 25px; font-weight: 400;" >Css Syntax</h2>
+    <ul>
+      <li>
+        A CSS rule-set consists of a selector and a declaration block:
+      </li>
+    </ul><br>    
+        <img src="./assets/selector.gif">
+        <ul>
+          <li>
+            The selector points to the HTML element you want to style.
+          </li><br>
+          <li>
+            The declaration block contains one or more declarations separated by semicolons.
+          </li><br>
+          <li>
+            Each declaration includes a CSS property name and a value, separated by a colon.
+          </li><br>
+          <li>
+            Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+          </li><br>
+        </ul>
+
+
+        <fieldset style="width: 1060px; height: 350px;">
+          <legend>
+            <h2>This Example all paragraph elements will be center-aligned, with a red text color:</h2> </legend>
+          <table class="zoom">
+            <tr>
+                 <td>       
+                      <div>
+                        <pre>
+                          
+                        <code style="text-align: center;">
+                          {{"
+                          p {
+                            color: red;
+                            text-align: center;
+                          }
+                      "}}
+                      </code>
+                    </pre>
+                 </div>
+               </td>
+            </tr>
+          </table>			
+        </fieldset>
+        <br>
+       <h2>
+         Example Explained
+       </h2>
+        <ul>
+          <li>
+            <mark style="background-color:lightgreen; font-weight: 100;">p</mark> is a <b>selector</b> in CSS (it points to the HTML element you want to style: P).
+          </li><br>
+          <li>
+            <mark style="background-color:lightgreen; font-weight: 100;"> color</mark> is a property, and <mark style="background-color: lightgreen;"> red</mark> is the property value.
+          </li><br>
+          <li>
+           <mark style="background-color:lightgreen; font-weight: 100;"> text-align </mark>is a property, and <mark style="background-color:lightgreen;">center</mark> is the property value
+          </li>
+          <br>
+        </ul>
+  </div>
+
+
+
+  <div *ngSwitchCase="'contact'"> 
+  <h1 style="font-size: 35px; padding-top: 20px;">Css Selectors</h1>
+  <br>
+  <hr>
+  <br>
+  <h2 style="font-size: 25px; font-weight: 400;" >Css Selectors</h2><br>
+  <p>
+    CSS selectors are used to "find" (or select) the HTML elements you want to style.
+  </p>
+  <br>
+  <p>
+    We can divide CSS selectors into five categories:
+  </p>
+  <ul>
+    <li>
+      Simple selectors (select elements based on name, id, class)
+    </li><br>
+    <li>
+      <u>Combinator selectors</u> (select elements based on a specific relationship between them)
+    </li><br>
+    <li>
+      <u>Pseudo-class</u> selectors (select elements based on a certain state)
+    </li> <br>  
+    <li>
+      <u>Pseudo-elements</u> selectors (select and style a part of an element)
+    </li><br>
+    <li>
+     <u> Attribute selectors</u> (select elements based on an attribute or attribute value)
+    </li><br>
+  </ul>
+<p style="padding-bottom: 10px;">
+  This page will explain the most basic CSS selectors.
+</p>
+<hr>
+
+
+<h1 style="font-size: 35px; padding-top: 20px;">Css Element Selector</h1>
+<p>
+  The element selector selects HTML elements based on the element name.
+</p>
+<fieldset style="width: 1060px; height: 350px; padding-bottom: 10px;">
+  <legend><h2>In this example all paragraph elements will be center-aligned, with a red text color:</h2></legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  p {
+                    color: red;
+                    text-align: center;
+                  }
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+
+<hr>
+
+<h1 style="font-size: 35px; padding-top: 20px;"> CSS id Selector</h1>
+<br>
+<p>
+  The id selector uses the id attribute of an HTML element to select a specific element.
+</p>
+<p>
+  The id of an element is unique within a page, so the id selector is used to select one unique element!
+</p>
+<p>
+  To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+</p>
+<fieldset style="width: 1060px; height: 350px; padding-bottom: 10px;">
+  <legend><h2> The CSS rule below will be applied to the HTML element with id="para1":</h2> 
+
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  #para1 {
+                    text-align: center;
+                    color: red;
+                  }
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+<h1 style="padding-top: 10px; background-color:yellow; font-size:x-large; height: 50px;">Note: An id name cannot start with a number!
+</h1>
+<br>
+<hr>
+
+<h1 style="font-size: 35px; padding-top: 20px;"> CSS Class Selector</h1>
+
+<p>The class selector selects HTML elements with a specific class attribute. </p>
+<p> To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+
+<fieldset style="width: 1060px; height: 350px; padding-bottom: 10px;">
+  <legend><h2>
+    In this example all HTML elements with class="center" will be red and center-aligned: </h2> </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  .center {
+                    text-align: center;
+                    color: red;
+                  }
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+
+<fieldset style="width: 1060px; height: 350px; padding-bottom: 10px;">
+  <legend>
+    <h2>
+    In this example only paragraph elements with class="center" will be center-aligned: 
+  </h2>
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  p.center {
+                    text-align: center;
+                    color: red;
+                  }
+                  
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+
+<h1 style="padding-top: 10px; background-color:yellow; font-size:x-large; height: 50px;">Note: An Class name cannot start with a number!
+</h1>
+<br>
+
+<hr>
+
+<h1 style="font-size: 35px; padding-top: 20px;"> CSS Universal Selector</h1>
+<br>
+<p>
+  The universal selector (*) selects all HTML elements on the page.
+</p>
+
+<fieldset style="width: 1060px; height: 350px; padding-bottom: 10px;">
+  <legend>
+    <h2>
+    The CSS rule below will affect every HTML element on the page: 
+  </h2>
+
+ 
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  * {
+                    text-align: center;
+                    color: blue;
+                  }
+                  
+                  
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+
+<hr>
+
+<h1 style="font-size: 35px; padding-top: 20px;">The CSS Grouping Selector</h1>
+<br>
+<p>
+  The grouping selector selects all the HTML elements with the same style definitions.
+</p>
+<p>
+  Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+</p>
+
+
+<fieldset style="width: 1060px; height: 450px; padding-bottom: 10px;">
+  
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  h1 {
+                    text-align: center;
+                    color: red;
+                  }
+                  
+                  h2 {
+                    text-align: center;
+                    color: red;
+                  }
+                  
+                  p {
+                    text-align: center;
+                    color: red;
+                  }
+                  
+                  
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+<p>
+  It will be better to group the selectors, to minimize the code.
+</p>
+<p>
+  To group selectors, separate each selector with a comma.
+</p>
+<br>
+
+<fieldset style="width: 1060px; height: 350px; padding-bottom: 10px;">
+  <legend>
+    <h2>In this example we have grouped the selectors from the code above:</h2> 
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>
+                  
+                <code style="text-align: center;">
+                  {{"
+                  
+                  h1, h2, p {
+                    text-align: center;
+                    color: red;
+                  }
+                  
+                  
+              "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+</div>
+
+
+
+
+
+
+
+  <div *ngSwitchCase="'about'"> 
+    <h1 style="font-size: 35px; padding-top: 20px;"> How To Add Css</h1>
+<br>
+<hr>
+  <h3 style="padding-top: 20px 0px 20px 0px;">When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</h3>
+<hr>
+<br>
+<h3 style="font-size: 30px; padding-top: 20px;">Three Ways to Insert CSS</h3>
+<br>
+<h3>
+  There are three ways of inserting a style sheet:
+</h3>
+<ul>
+  <li>
+    External CSS
+  </li><br>
+  <li>
+    Internal CSS
+  </li><br>
+  <li>
+    Inline CSS
+  </li><br>
+  
+</ul>
+<br>
+<hr>
+<br>
+<h3 style="font-size: 30px; padding-top: 20px;">
+  External CSS
+</h3>
+<br>
+<p>
+  With an external style sheet, you can change the look of an entire website by changing just one file!
+</p>
+<p>
+  "Each HTML page must include a reference to the external style sheet file inside the <mark style="color:black; background-color:lightgreen; font-size: large;">  link</mark>element, inside the head section."
+</p>
+
+<fieldset style="width: 1060px; height: 500px; padding-bottom: 10px;">
+  <legend>
+    <h2> External styles are defined within the <b>link</b> element, inside the <b>head</b> section of an HTML page:</h2>
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>     
+                <code style="text-align: center;">
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;head&gt;
+                  &lt;link rel="stylesheet" href="mystyle.css"&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+
+                  &lt;h1 This is a heading.&lt;/h1&gt;
+                  &lt;p This is a paragraph.&lt;/p&gt;
+                  
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+<br>
+
+<p>An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
+<br>
+<p>
+  The external .css file should not contain any HTML tags.
+</p>
+<br>
+<p>
+  Here is how the "mystyle.css" file looks like:
+</p>
+<br>
+
+
+<fieldset style="width: 1060px; height: 400px; padding-bottom: 10px;">
+  <legend>
+    <h2>"mystyle.css"</h2>
+
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>     
+                <code style="text-align: center;">
+                  {{" 
+                  body {
+                    background-color: lightblue;
+                  }
+                  
+                  h1 {
+                    color: navy;
+                    margin-left: 20px;
+                  }
+                  "}}
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+<br>
+<h1 style="padding-top: 10px; background-color:yellow; font-size:large; height: 50px;">Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is:margin-left:20px;
+</h1>
+<br>
+<hr>
+<br>
+<h1 style="font-size: 35px; padding-top: 20px;"> Internal Css</h1>
+<br>
+<p>
+  An internal style sheet may be used if one single HTML page has a unique style.
+</p>
+<p>
+  The internal style is defined inside the &lt;style&gt; element, inside the head section.
+</p>
+<br>
+
+
+<fieldset style="width: 1060px; height: 600px; padding-bottom: 10px;">
+  <legend>
+    <h2> External styles are defined within the <b>link</b> element, inside the <b>head</b> section of an HTML page:</h2>
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>     
+                <code style="text-align: center;">
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;head&gt;
+                  &lt;style&gt;
+                 {{
+                   "  body {
+                      background-color: linen;
+                      }
+                      h1 {
+                        color: maroon;
+                        margin-left: 40px;
+                      }"
+                 }}
+                  &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;h1&gt;This is a heading.&lt;/h1&gt;
+                  &lt;body&gt;
+                  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+<hr>
+<br>
+<h1 style="font-size: 35px; padding-top: 20px;">Inline Css</h1>
+<br>
+<h3>
+  An inline style may be used to apply a unique style for a single element.
+</h3>
+<h3>
+  To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+</h3>
+<fieldset style="width: 1060px; height: 500px; padding-bottom: 10px;">
+  <legend>
+    <h2> Inline styles are defined within the "style" attribute of the relevant element:
+
+    </h2>
+  </legend>
+  <table class="zoom">
+    <tr>
+         <td>       
+              <div>
+                <pre>     
+                <code style="text-align: center;">
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;body&gt;
+                  &lt;h1 style="color:blue;text-align:center;"&gt;This is a heading.&lt;/h1&gt;
+                  &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+              </code>
+            </pre>
+         </div>
+       </td>
+    </tr>
+  </table>			
+</fieldset>
+<br>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div *ngSwitchDefault> other</div>
+
+</div>
+
+</body>
+</html>
