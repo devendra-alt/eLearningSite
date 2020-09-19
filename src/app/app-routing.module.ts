@@ -9,10 +9,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path:'', redirectTo:'/mainheader',pathMatch:'full'},
-  {path:'mainheader', component:MainheaderComponent},
-  {path:'login',component:LoginComponent}
 
+  { path: '', component: ShoppingcartComponent },
+  { path: 'checkout', component: CheckoutComponent },
 ];
 
 @NgModule({
