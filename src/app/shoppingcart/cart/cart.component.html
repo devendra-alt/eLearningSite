@@ -1,0 +1,20 @@
+<div *ngIf="cartItems.length === 0" class="alert alert-danger" role="alert">
+    Your cart is empty!
+</div>
+<div *ngIf="cartItems.length" class="alert alert-success" role="alert">
+    Items in yout cart.
+
+</div>
+
+<ul *ngIf="cartItems.length > 0" class="list-group">
+    <li class="list-group-item" *ngFor="let items of cartItems">
+        <app-cart-list [cartItems]="items"></app-cart-list>
+    </li>
+    <li class="list-group-item" style="background-color:#00FF00 ;"><strong>Amount:<br>
+            {{cartTotalo |currency:'INR'}}</strong></li>
+</ul>
+<br>
+<div *ngIf="cartItems.length">
+    <button type="button" class="btn btn-danger btn-lg" a href="##" routerLink="/checkout">CheckOut</button>
+
+</div>

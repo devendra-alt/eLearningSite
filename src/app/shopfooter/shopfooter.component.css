@@ -1,0 +1,18 @@
+img{
+    height:50px;
+    width:50px;
+}
+h5{
+    display: flex;
+    justify-content: center;
+}
+ul{
+ 
+    display: flex;
+    justify-content: center;
+    margin-left:200px;
+}
+ul li{
+    
+    margin-right:150px;
+}
