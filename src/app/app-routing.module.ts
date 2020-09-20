@@ -10,13 +10,18 @@ import {ShoppingcartComponent} from './shoppingcart/shoppingcart.component';
 import { Routes, RouterModule } from '@angular/router';
 
 
-
 const routes: Routes = [
-  { path: '', component: Homepagefooter12Component },
-  {path:'' ,component:MainheaderComponent},
-  {path:'' ,component:Homepagenave12Component}
-  
-];
+  {path:'' , component:LoginComponent},
+  {path:'homenavbar', component:Homepagenave12Component},
+  {path:'shopnavbar' ,component:ShopnavComponent,
+
+   children:[
+    
+   ]
+},
+  { path: 'checkout', component: CheckoutComponent },
+ 
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
