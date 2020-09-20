@@ -1,10 +1,17 @@
 
-<div class="card text-center" style="width: 500px; height:600px; position: relative; margin: auto; top:150px;">
+<div class="card text-center" style="width: 500px; height:auto; position: relative; margin: auto; top:150px;">
     <div class="card-header">
         Featured
     </div>
     <div class="card-body" style="width:500px;">
         <form #coursesform="ngForm" novalidate>
+            <div class="form-group">
+                <label for="form-title">Email-Id</label>
+                <input name="email" #emailtitle="ngModel" type="text" class="form-control" ngModel required>
+                <div [hidden]="emailtitle.valid || emailtitle.pristine" class="alert alert-danger">
+                    Please enter your Email-Id.
+                </div>
+            </div>
             <div class="form-group">
                 <label for="form-title">First Name</label>
                 <input name="form" #formtitle="ngModel" type="text" class="form-control" ngModel required >
@@ -29,17 +36,17 @@
             </div>
 
         <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"   >
+            <label class="custom-control-label" for="customRadioInline1">Net Banking</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+            <label class="custom-control-label" for="customRadioInline2">Paytm</label>
         </div>
-        
-        
-
+        <br>
+       <br>
             <button class="btn btn-primary" type="submit" [disabled]="!coursesform.form.valid ">Save</button>
+            
         </form>
     
     </div>
