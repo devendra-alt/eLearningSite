@@ -1,15 +1,12 @@
 import { browser } from 'protractor';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { RouterModule } from '@angular/router';
-import { MatRippleModule } from '@angular/material/core';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MainheaderComponent } from './mainheader/mainheader.component';
 import { ShopheaderComponent } from './shopheader/shopheader.component';
 import { ShopnavComponent } from './shopnav/shopnav.component';
@@ -22,6 +19,8 @@ import { ProductsComponent } from './shoppingcart/products/products.component';
 import { CartListComponent } from './shoppingcart/cart/cart-list/cart-list.component';
 import { ProductitemComponent } from './shoppingcart/products/productitem/productitem.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
+import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.component';
 
 
 @NgModule({
@@ -39,6 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProductsComponent,
     CartListComponent,
     ProductitemComponent,
+    Homepagenave12Component,
+    Homepagefooter12Component,
    
 
   ],
@@ -46,9 +47,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatCheckboxModule,
-    MatRippleModule,
-    MatSlideToggleModule,
+ 
     RouterModule.forRoot([
     
     {
