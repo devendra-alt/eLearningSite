@@ -1,3 +1,4 @@
+import { CountdownModule } from 'ngx-countdown';
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 @Component({
