@@ -1,6 +1,5 @@
 import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
 import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { ShopnavComponent } from './shopnav/shopnav.component';
 import { ShopfooterComponent } from './shopfooter/shopfooter.component';
 import { LoginComponent } from './login/login.component';
@@ -19,7 +18,7 @@ const routes: Routes = [
     
    ]
 },
-  { path: 'checkout', component: CheckoutComponent },
+
  
   ];
 
