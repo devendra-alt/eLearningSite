@@ -20,6 +20,7 @@ import { ProductitemComponent } from './shoppingcart/products/productitem/produc
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
 import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.component';
+import { CheckComponent } from './check/check.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.c
     ProductitemComponent,
     Homepagenave12Component,
     Homepagefooter12Component,
+    CheckComponent,
    
 
   ],

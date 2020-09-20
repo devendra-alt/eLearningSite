@@ -1,0 +1,49 @@
+
+<div class="card text-center" style="width: 500px; height:600px; position: relative; margin: auto; top:150px;">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body" style="width:500px;">
+        <form #coursesform="ngForm" novalidate>
+            <div class="form-group">
+                <label for="form-title">First Name</label>
+                <input name="form" #formtitle="ngModel" type="text" class="form-control" ngModel required >
+                <div [hidden]="formtitle.valid || formtitle.pristine" class="alert alert-danger" >
+                    Please enter your First Name.
+                </div>
+            </div>
+             <div class="form-group">
+                <label for="form-title">Last Name</label>
+                <input name="form1" #formtitle1="ngModel" type="text" class="form-control" ngModel required >
+                <div [hidden]="formtitle1.valid || formtitle1.pristine" class="alert alert-danger" >
+                    Please enter Last Name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <span class="input-group-addon"></span>
+                <input name="phone" #phonefo="ngModel" required type="number" class="form-control" ngModel>
+                <div [hidden]="phonefo.valid || phonefo.pristine" class="alert alert-danger">
+                    Please enter Your phone Number.
+                </div>
+            </div>
+
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+        </div>
+        
+        
+
+            <button class="btn btn-primary" type="submit" [disabled]="!coursesform.form.valid ">Save</button>
+        </form>
+    
+    </div>
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>

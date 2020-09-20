@@ -7,20 +7,15 @@ import { MainheaderComponent } from './mainheader/mainheader.component';
 import { NgModule, Component } from '@angular/core';
 import {ShoppingcartComponent} from './shoppingcart/shoppingcart.component';
 import { Routes, RouterModule } from '@angular/router';
+import { CheckComponent } from './check/check.component';
 
 
 const routes: Routes = [
-  {path:'' , component:LoginComponent},
-  {path:'homenavbar', component:Homepagenave12Component},
-  {path:'shopnavbar' ,component:ShopnavComponent,
-
-   children:[
-    
-   ]
-},
-
- 
-  ];
+  { path: '', component: LoginComponent },
+  { path: 'homenavbar', component: Homepagenave12Component },
+  { path: 'shopnavbar', component: ShopnavComponent },
+  { path: 'check', component: CheckComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
