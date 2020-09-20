@@ -12,7 +12,6 @@ import { ShopheaderComponent } from './shopheader/shopheader.component';
 import { ShopnavComponent } from './shopnav/shopnav.component';
 import { ShopfooterComponent } from './shopfooter/shopfooter.component';
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './shoppingcart/cart/cart.component';
 import { FiltersComponent } from './shoppingcart/filters/filters.component';
 import { ProductsComponent } from './shoppingcart/products/products.component';
@@ -32,7 +31,6 @@ import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.c
     ShopnavComponent,
     ShopfooterComponent,
     ShoppingcartComponent,
-    CheckoutComponent,
     CartComponent,
     FiltersComponent,
     ProductsComponent,
