@@ -1,41 +1,48 @@
-<div class="displayTable">
-    <div class="displayTableCell">
-
-        <div class="authBlock">
-            <h3>Sign In</h3>
-            <div class="formGroup">
-                <input type="text" class="formControl" placeholder="Username" #userName required>
-            </div>
-
-            <div class="formGroup">
-                <input type="password" class="formControl" placeholder="Password" #userPassword required>
-            </div>
-
-            <!-- Calling SignIn Api from AuthService -->
-            <div class="formGroup">
-                <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
-            </div>
-
-            <div class="formGroup">
-                <span class="or"><span class="orInner">Or</span></span>
-            </div>
-
-            <!-- Calling GoogleAuth Api from AuthService -->
-            <div class="formGroup">
-                <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-            <i class="fab fa-google-plus-g"></i>
-            Log in with Google
-          </button>
-            </div>
-
-            <div class="forgotPassword">
-                <span routerLink="/forgot-password">Forgot Password?</span>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger ml-0 mr-auto" href="#page-top"><img src="assets/logo.png" alt="alphaLogo"></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto mr-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/register-user" [routerLinkActive]="['active']" fragment="form">Sign Up</a>
+                </li>
+            </ul>
         </div>
-
-        <div class="redirectToLogin">
-            <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
-        </div>
-
     </div>
-</div>
+</nav>
+<form class="container container-fluid shadow-lg">
+    <h2>Sign In</h2>
+
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address" #userName required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" #userPassword required autocomplete="off">
+    </div>
+
+    <!-- Calling SignIn Api from AuthService -->
+    <div class="form-group">
+        <button type="button" class="btn btn-primary form-control" (click)="authService.SignIn(userName.value, userPassword.value)">Sign In</button>
+    </div>
+
+    <div class="form-group">
+        <span id="or"><span class="orInner">Or</span></span>
+    </div>
+
+    <!-- Calling GoogleAuth Api from AuthService -->
+    <div class="form-group">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+                <i class="fab fa-google-plus-g"></i>
+                Log in with Google
+              </button>
+    </div>
+
+
+    <div class="form-group">
+        <a routerLink="/forgot-password">Forgot Password?</a>
+    </div>
+    <div class="form-group">
+        <span>Don't have an account?<a class="redirect" routerLink="/register-user"> Sign Up</a></span>
+    </div>
+</form>

@@ -6,13 +6,9 @@ import { AuthServiceService } from '../services/auth-service.service';
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.css']
 })
-export class ForgotPasswordComponent implements OnInit {
+export class ForgotPasswordComponent {
 
   constructor(
     public authService: AuthServiceService
   ) { }
-
-  ngOnInit(): void {
-  }
-
 }
