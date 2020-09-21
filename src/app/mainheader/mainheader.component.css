@@ -1,85 +1,7 @@
-
-h1{
-    margin: 0px;
-}
-
-/*-------Main-Header------*/
-.main-header{
-    display: flex;
-    width: 99vw;
-    height:90px;
-    background-color: black;
-    flex-direction: row;
-    justify-content: center;
-    position: fixed;
-    z-index:2;
-}
-.main-header img{
-    margin-top: 6px;
-     height: 70px;
-     height: 60px;
-     position: relative;
-     right: 100px;
-     top:10px;
-    
-}
-@keyframes rotation {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(359deg);
-  }
-}
-
-.main-main{
-    display:block;
-    
-}
-
-.main-header h1{
-    margin: 0px;
-    color: #388d3c;
-    font-weight: bolder;
-    font-size:2.3rem;
-}
-.div-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}
-.div-header ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding:0px;
-    margin: 0px;
-    justify-content: center;
-
-}
-.div-header ul li {
-    list-style: none;
-    font-size:1.7rem; 
-
-}
-.div-header ul li a{
-    color:#876635;
-    list-style: none;
-    margin-left:25px;
-    text-decoration: none;
-    transition: 0.5s all ease-in-out;
-     
-}
-.div-header ul li a:hover{
-    
-    color: white;
-    text-decoration:underline;
-}
 /*------Main-Section----*/
 .main-section{
     width: 99vw;
-    height:2550px;
+    height:2350px;
     background-color:white;
 }
 .main-main{
@@ -133,12 +55,12 @@ h1{
     height:5px;
     width:1300px;
     color: green;
-    top:300px;
+    top:380px;
     border-color:#876635;
 }
 .main-main .pie-language{
 position:relative;
-top: 320px;
+top:400px;
 margin: auto;
  height:auto;
  width:90vw;
@@ -438,7 +360,6 @@ section .section-title {
     -webkit-transform-style: preserve-3d;
     -ms-transition: 1s;
     -moz-transition: 1s;
-    -moz-transform: perspective(1000px);
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transition: 1s;
@@ -448,8 +369,6 @@ section .section-title {
 
 .frontside {
     position: relative;
-    -webkit-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
     z-index: 2;
     margin-bottom: 30px;
 }
@@ -518,31 +437,4 @@ section .section-title {
 
 
 }
-.footer-one{
-     width:100%;
-    height:230px;
-    position:relative;
-    top:800px;
-    background-image: url('/assets/pexels-tomáš-malík-1703314.jpg');
 
-    
-
-}
-.footer-one ul{
-    margin: auto;
-}
-.footer-one ul a{
-    font-size:1.5rem;
-    word-spacing:0px;
-     margin-right:40px;
-    text-decoration: none;
-    color: white;
-   font-weight: bolder;
-   transition: 0.5s all ease-in-out;
-}
-.footer-one ul a:hover{
-
-    text-decoration: underline;
-    color: #876635;
-
-}

@@ -1,0 +1,78 @@
+h1{
+    margin: 0px;
+}
+
+/*-------Main-Header------*/
+.main-header{
+    display: flex;
+    width: 99vw;
+    height:90px;
+    background-color: black;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    z-index:2;
+}
+.main-header img{
+    margin-top: 6px;
+     height: 70px;
+     height: 60px;
+     position: relative;
+     right: 100px;
+     top:10px;
+    
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+
+.main-main{
+    display:block;
+    
+}
+
+.main-header h1{
+    margin: 0px;
+    color: #388d3c;
+    font-weight: bolder;
+    font-size:2.3rem;
+}
+.div-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.div-header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:0px;
+    margin: 0px;
+    justify-content: center;
+
+}
+.div-header ul li {
+    list-style: none;
+    font-size:1.7rem; 
+
+}
+.div-header ul li a{
+    color:#876635;
+    list-style: none;
+    margin-left:25px;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+     
+}
+.div-header ul li a:hover{
+    
+    color: white;
+    text-decoration:underline;
+}
+

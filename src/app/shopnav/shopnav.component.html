@@ -8,12 +8,26 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="##" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="##" routerLink="/homenavbar">Home <span class="sr-only">(current)</span></a>
             </li>
-
-
-
         </ul>
-
     </div>
+   <a routerLink="/list"> <img src="/assets/order.svg" style="height: 40px; width: 40px;"></a>
 </nav>
+<main>
+    <div class="row ">
+        <div class="col">
+            <app-filters></app-filters>
+        </div>
+        <div class="col-md-8">
+            <app-products></app-products>
+        </div>
+        <div class="col">
+            <app-cart></app-cart>
+        </div>
+    </div>
+</main>
+<footer>
+   <app-shopfooter></app-shopfooter> 
+</footer>
+

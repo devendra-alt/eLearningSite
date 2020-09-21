@@ -1,0 +1,15 @@
+input.ng-invalid{
+    border-left: 20px solid red;
+}
+input.ng-valid{
+    border-left: 20px solid green;
+}
+.mmds{
+    margin-left:70px;
+    background-color: darkgreen;
+}
+.form41  label{
+    display: flex;
+    justify-content: left;
+
+}
