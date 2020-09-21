@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <ul class=" nav nav-pills">
+            <li [class.active]="viewMode=='home'"><a (click)="viewMode='home'" routerLink="html-introduction" (click)="goToTop()">Html Introduction</a></li>
+            <li [class.active]="viewMode=='news'"><a (click)="viewMode='news'" (click)="goToTop()">Html Editors</a></li>
+            <li [class.active]="viewMode=='about'"><a (click)="viewMode='about'" (click)="goToTop()">Html Formatting</a></li>
+            <li [class.active]="viewMode=='contact'"><a (click)="viewMode='contact'" (click)="goToTop()">Html Comments</a></li>
+
+        </ul>
+    </div>
+    <div class="content" [ngSwitch]="viewMode">
+        <div *ngSwitchCase="'home'">
+            <h1 style="font-size: 35px; padding-top: 20px;">Html Introduction</h1>
+            <br>
+            <hr>
+            <h4> HTML is the standard markup language for creating Web pages.</h4>
+            <hr>
+            <h2>
+                What is HTML?
+            </h2>
+            <ul>
+                <li>
+                    HTML stands for Hyper Text Markup Language
+                </li><br>
+                <li>
+                    HTML is the standard markup language for creating Web pages
+                </li><br>
+                <li>
+                    HTML describes the structure of a Web page
+                </li><br>
+                <li>
+                    HTML consists of a series of elements
+                </li><br>
+                <li>
+                    HTML elements tell the browser how to display the content
+                </li><br>
+                <li>
+                    HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+                </li><br>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h1 style="font-size: 30px;">A Simple HTML Document</h1>
+            <br>
+            <fieldset style="width: 1060px; height: 450px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="up" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>     
+                <code style="color:brown"> 
+                
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;head&gt;
+                  &lt;titile&gt;<code style="color: black;">Page Title</code>&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                 
+                 
+                  &lt;h1&lt;<code style="color: black;">My First Heading</code>&lt;/h1&gt;
+                  &lt;p&lt;<code style="color: black;">This is a paragraph.</code>&lt;/p&gt;
+                  
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <br>
+            <h3>Example Explained</h3>
+            <ul>
+                <li>
+                    The <mark style="background-color:lightgreen;"> &lt;!DOCTYPE html&gt;</mark> declaration defines that this document is an HTML5 document
+                </li><br>
+                <li>
+                    The <mark style="background-color:lightgreen;">&lt;html&gt;</mark> element is the root element of an HTML page
+                </li><br>
+                <li>
+                    The <mark style="background-color:lightgreen;">&lt;head&gt;</mark> element contains meta information about the HTML page
+                </li><br>
+                <li>
+                    The <mark style="background-color:lightgreen;">&lt;title&gt;</mark> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+                </li><br>
+                <li>
+                    The <mark style="background-color:lightgreen;">&lt;body&gt;</mark> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+                </li><br>
+                <li>
+                    The <mark style="background-color:lightgreen;">&lt;h1&gt;</mark> element defines a large heading
+                </li><br>
+                <li>
+                    The <mark style="background-color:lightgreen;">&lt;p&gt;</mark> element defines a paragraph
+                </li><br>
+            </ul>
+
+            <hr>
+            <h1 style="font-size: 30px;">What is an HTML Element?</h1>
+            <br>
+            <h3>An HTML element is defined by a start tag, some content, and an end tag:</h3>
+
+            <h2>&lt;tagname&gt;<code style="color: black;">Contents goes here...</code>&lt;/tagname&gt;</h2>
+            <h3>The HTML <b>element</b> is everything from the start tag to the end tag:
+            </h3>
+            <h2>&lt;h1&gt;<code style="color: black;">My First Page</code>&lt;/h1&gt;</h2><br>
+            <mark><b>Note:</b>Some HTML elements have no content (like the &lt;br&gt; element). These elements are called empty elements. Empty elements do not have an end tag!
+</mark>
+        </div>
+
+
+        <div *ngSwitchCase="'news'">
+            <h1 style="font-size: 35px; padding-top: 20px;">Html Editors</h1>
+            <br>
+            <hr>
+            <p style="font-size: medium;">A simple text editor is all you need to learn HTML.</p>
+            <hr>
+
+            <h2 style="font-size: 20px; padding-top: 20px;">Learn HTML Using Notepad or TextEdit
+            </h2>
+
+            <h3>Web pages can be created and modified by using professional HTML editors.</h3>
+
+            <h3>However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).</h3>
+
+            <h3>We believe in that using a simple text editor is a good way to learn HTML.
+            </h3>
+
+            <h3>
+                Follow the steps below to create your first web page with Notepad or TextEdit.
+            </h3>
+            <hr><br>
+            <h1 style="font-size: 30px;">Step 1: Open Notepad (PC)
+            </h1>
+            <h3><b> Windows 8 or later:</b>
+            </h3>
+            <h3>Open the <b> Start Screen</b> (the window symbol at the bottom left on your screen). Type Notepad.
+            </h3>
+            <h3><b>Windows 7 or earlier:</b>
+            </h3>
+            <h3>Open <b>Start > Programs > Accessories > Notepad
+</b>
+            </h3>
+            <hr><br>
+            <h1 style="font-size: 30px;">Step 1: Open Notepad (Mac)
+            </h1>
+
+            <h3>Open <b>Start > Programs > Applications > TextEdit
+</b>
+            </h3>
+            <h3>
+                Also change some preferences to get the application to save files correctly. In <b>Preferences > Format ></b> choose <b>"Plain Text"</b>
+            </h3>
+            <h3>
+                Then under "Open and Save", check the box that says "Display HTML files as HTML code instead of formatted text".
+            </h3>
+            <h3>
+                <b>Then open a new document to place the code.</b>
+            </h3>
+            <hr><br>
+            <h1 style="font-size: 30px;">Step 2: Write Some HTML
+            </h1>
+            <h3>Write or copy the following HTML code into Notepad:</h3>
+
+            <fieldset style="width: 1060px; height: 450px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="down" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>     
+                <code style="color:brown"> 
+                
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;body&gt;
+                 
+                  &lt;h1&lt;<code style="color: black;">My First Heading</code>&lt;/h1&gt;
+                 
+                  &lt;p&lt;<code style="color: black;">My First paragraph.</code>&lt;/p&gt;
+                  
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <img src="./assets/img_notepad.gif" width="auto">
+            <hr>
+            <br>
+            <hr>
+            <br>
+            <h1 style="font-size: 30px;">Step 3: Save the HTML Page
+            </h1>
+            <h3>Save the file on your computer. Select File > Save as in the Notepad menu.
+            </h3>
+            <h3>
+                Name the file <b>"index.htm"</b> and set the encoding to <b>UTF-8</b> (which is the preferred encoding for HTML files).
+            </h3>
+            <br>
+            <img src="./assets/img_saveas.png">
+            <br>
+            <br>
+            <mark><b>Tip:</b>You can use either .htm or .html as file extension. There is no difference, it is up to you.
+</mark>
+            <br>
+            <hr>
+            <br>
+            <h1 style="font-size: 30px;">Step 4: View the HTML Page in Your Browser</h1>
+            <h3>Open the saved HTML file in your favorite browser (double click on the file, or right-click - and choose "Open with").</h3>
+            <h3>The result will look much like this:</h3>
+            <br>
+            <img src="./assets/img_chrome.png">
+            <br>
+            <hr>
+        </div>
+
+        <div *ngSwitchCase="'about'">
+            <h1 style="font-size: 35px; padding-top: 20px;">Html Text Formatting</h1>
+            <br>
+            <hr>
+            <h4>Html contains several elements for defining text with a special meaning.</h4>
+            <hr>
+            <br>
+
+            <fieldset style="width: 1060px; height: 330px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="left" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>     
+                <code> 
+                <b> The text is bold</b><br>
+                <i>The text is italic</i><br>
+                This is <sub>subscript</sub> and <sup>superscript</sup>                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;"> Html Formatting Element
+            </h2>
+            <h2 style="font-size: 17px;">Formatting elements were designed to display special types of text:</h2>
+
+            <ul type="circle">
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;b&gt;</mark> - Bold text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;strong&gt;</mark> - Important text
+                </li><br>
+                <li>
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;i&gt;</mark> - Italic text
+                    <mark style="background-color: lightgreen;">&lt;em&gt;</mark> - Emphasized text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;mark&gt;</mark> - Marked text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;small&gt;</mark> - Smaller text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;del&gt;</mark> - Deleted text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;ins&gt;</mark> - Inserted text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;sub&gt;</mark> - Subscript text
+                </li><br>
+                <li>
+                    <mark style="background-color: lightgreen;">&lt;sup&gt;</mark> - Superscript text
+                </li><br>
+            </ul>
+            <hr>
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;b&gt; and &lt;strong&gt; Elements</h2>
+            <h2 style="font-size: 17px;">The Html &lt;b&gt; element defines bold text, without any extra importance.</h2>
+
+
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="right" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                 &lt;<samp style="color: red;">b</samp>&gt;The text is bold&lt;<samp style="color: red;">/b</samp>&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <h2 style="font-size: 17px;">The Html &lt;strong&gt; element defines text with strong importance. The content inside is typically displayed in bold.</h2>
+            <br>
+
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="left" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                 &lt;<samp style="color: red;">strong</samp>&gt;The text is Important&lt;<samp style="color: red;">/strong</samp>&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;i&gt; and &lt;em&gt; Elements</h2>
+            <h2 style="font-size: 17px;">The Html &lt;i&gt; element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.</h2>
+            <h2 style="font-size: 17px;"><b>Tip:</b> &lt;i&gt; tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.
+            </h2>
+
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="up" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                 &lt;<samp style="color: red;">i</samp>&gt;This text is italic&lt;<samp style="color: red;">/i</samp>&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <h2 style="font-size: 17px;">The HTML &lt;em&gt; element defines emphasized text. The content inside is typically displayed in italic.
+            </h2>
+            <h2 style="font-size: 17px;"><b>Tip:</b> A screen reader will pronounce the words in &lt;em&gt; with an emphasis, using verbal stress.
+            </h2>
+
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="down" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                 &lt;<samp style="color: red;">em</samp>&gt;This text is emphasized&lt;<samp style="color: red;">/em</samp>&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;small&gt;Elements</h2>
+            <h2 style="font-size: 17px;">The HTML &lt;small&gt;element defines smaller text:
+            </h2>
+
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="inherit" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                 &lt;<samp style="color: red;">small</samp>&gt;This is some smaller text.&lt;<samp style="color: red;">/small</samp>&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;mark&gt;Elements</h2>
+            <h2 style="font-size: 17px;">The HTML &lt;mark&gt;element defines text that should be marked or highlighted:</h2>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="right" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                &lt;p&gt;Do not forget to buy &lt;<samp style="color: red;">mark</samp>&gt;milk&lt;<samp style="color:red;">/mark&gt;</samp> today&lt;/p&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;del&gt;Elements</h2>
+            <h2 style="font-size: 17px;">The HTML &lt;del&gt;element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text:</h2>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="up" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                &lt;p&gt;My favorite color is &lt;<samp style="color: red;">del</samp>&gt;red&lt;<samp style="color:red;">/del</samp>&gt;black&lt;/p&gt;     
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+
+
+
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;ins&gt;Elements</h2>
+            <h2 style="font-size: 17px;">The HTML &lt;ins&gt;element defines a text that has been inserted into a document. Browsers will usually underline inserted text:</h2>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="up" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                &lt;p&gt;My favorite color is &lt;<samp style="color: red;">del</samp>&gt;red&lt;<samp style="color:red;">/del</samp>&gt;&lt;<samp style="color:red;">ins</samp>&gt;black&gt;&lt;<samp style="color: red;">/ins</samp>&gt;&lt;/p&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+
+
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;sub&gt;Elements</h2>
+            <h2 style="font-size: 17px;">The HTML &lt;sub&gt;element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H<sub>2</sub>O:</h2>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="up" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                &lt;p&gt;This is &lt;<samp style="color: red;">sub</samp>&gt;subscripted&lt;<samp style="color:red;">/sub</samp>&gt;text&lt;/p&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+
+
+            <h2 style="font-size:25px; padding-top: 10px; padding-bottom: 10px;">Html &lt;sup&gt;Elements</h2>
+            <h2 style="font-size: 17px;">The HTML &lt;sup&gt; element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW<sup>[1]</sup>:</h2>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="right" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                <code> 
+                &lt;p&gt;This is &lt;<samp style="color: red;">sup</samp>&gt;superscripted&lt;<samp style="color:red;">/sup</samp>&gt;text&lt;/p&gt;                 
+              </code>
+            </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <hr>
+        </div>
+
+
+
+        <div *ngSwitchCase="'contact'">
+            <h1 style="font-size: 35px; padding-top: 20px;">Html Comments</h1>
+            <br>
+            <hr>
+            <h4> HTML comments are not displayed in the browser, but they can help document your HTML source code.
+            </h4>
+            <hr>
+            <h2>
+                HTML Comment Tags
+            </h2>
+            <h4> You can add comments to your HTML source by using the following syntax:
+            </h4>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="right" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                  <code> 
+                  &lt;<samp style="color: green;">!-- Write your comments here --</samp>&gt;                 
+                </code>
+              </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+            <br>
+            <h4> Notice that there is an exclamation point (!) in the start tag, but not in the end tag.
+            </h4>
+            <mark style="background-color: yellow;"><b>Note:</b>Comments are not displayed by the browser, but they can help document your HTML source code.
+  </mark>
+            <br>
+            <br>
+            <h4>With comments you can place notifications and reminders in your HTML code:
+            </h4>
+            <fieldset style="width: 1060px; height: 210px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="right" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                  <code> 
+                  &lt;<samp style="color: green;">!--This is Comment--</samp>&gt; 
+                  &lt;<samp style="color: red;"> p&gt;</samp>This is a paragraph.&lt;<samp style="color: red;"> /p&gt;</samp>&gt;
+                  &lt;<samp style="color: green;">!-- Remember to add more information here --</samp>&gt;  
+                </code>
+              </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+
+            <br>
+            <h4>Comments are also great for debugging HTML, because you can comment out HTML lines of code, one at a time, to search for errors:
+            </h4>
+            <br>
+            <fieldset style="width: 1060px; height: 240px; padding-bottom: 10px;">
+                <legend>
+                    <h2>Example</h2>
+                </legend>
+                <table>
+                    <marquee direction="right" class="dir">
+                        <tr>
+                            <td>
+                                <div>
+                                    <pre>       
+                  <code> 
+                  &lt;<samp style="color: green;">!--Do not display this at the moment
+                    &lt;img border="0" src="pic_trulli.jpg" alt="Trulli"&gt;--</samp>&gt; 
+                    
+                </code>
+              </pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </marquee>
+                </table>
+            </fieldset>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div *ngSwitchDefault> </div>
+
+    </div>
+
+</body>
+
+</html>

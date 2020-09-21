@@ -1,7 +1,44 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ChildActivationEnd } from '@angular/router';
+import { SignInComponent } from 'src/app/sign-in/sign-in.component';
+import { SignUpComponent } from 'src/app/sign-up/sign-up.component';
+import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from 'src/app/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from 'src/app/verify-email/verify-email.component';
+import { AuthGuard } from './services/auth.guard';
+import { MainheaderComponent } from './mainheader/mainheader.component';
+import { HmComponent } from './hm/hm.component';
+import { CodeComponent } from './code/code.component';
+import { HtmlComponent } from './html/html.component';
+import { CComponent } from './c/c.component';
+import { AngularComponent } from './angular/angular.component';
+import { CppComponent } from './cpp/cpp.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'register-user', component: SignUpComponent },
+  { path: 'dashboard', component: DashboardComponent ,canActivate:[AuthGuard],
+    children:[
+      {path:'',redirectTo:'home-page',pathMatch:'full'},
+      {path:'home-page',component:MainheaderComponent},
+      {path:'code-section',component:CodeComponent,
+        children:[
+         {path:'',redirectTo:'code-head',pathMatch:'full'},
+         // {path:'code-head',component:CodeComponent},
+          {path:'code-head',component:HmComponent},
+          {path:'html',component:HtmlComponent},
+          {path:'css',component:CComponent},
+          {path:'angular',component:AngularComponent},
+          {path:'cpp',component:CppComponent},
+        ]
+          
+    },
+    ]
+  },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'verify-email-address', component: VerifyEmailComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
