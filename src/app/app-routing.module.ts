@@ -1,3 +1,4 @@
+import { GreetingComponent } from './check/greeting/greeting.component';
 import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
 import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.component';
 import { ShopnavComponent } from './shopnav/shopnav.component';
@@ -10,11 +11,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { CheckComponent } from './check/check.component';
 
 
+
+
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'homenavbar', component: Homepagenave12Component },
   { path: 'shopnavbar', component: ShopnavComponent},
   { path: 'check', component: CheckComponent },
+  { path:'greeting' ,component:GreetingComponent},
 
 ];
 

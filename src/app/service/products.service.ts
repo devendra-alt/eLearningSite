@@ -10,57 +10,57 @@ export class ProductsService {
       1,
       'C++ Advance Programming',
       'product 1 description',
-      1500,
-      '/assets/maxresdefault (2).jpg'
+      850,
+      '/assets/6038586442907648.png'
     ),
     new Products(
       2,
       'JAVA For Beginners',
       'product 2 description',
-      599,
-      '/assets/cb88-java-logo-001.webp'
+      999,
+      '/assets/Java-.png'
     ),
     new Products(
       4,
-      'C Language',
+      'Unity Game Development',
       'product 4 description',
-      499,
-      '/assets/2542771_af5d_4.jpg'
+      5999,
+      '/assets/unity-logo-black_1280.0.jpg'
     ),
     new Products(
       5,
-      'C Sharp For Beginners',
+      'Python from scratch',
       'product 5 description',
       999,
-      '/assets/1_21Rj1YNRo6a8dSJ4j_x1mw.png'
+      '/assets/77626.jpg'
     ),
     new Products(
       6,
       'HTML',
       '#html is not a programming language',
       399,
-      '/assets/6575a3b261.png'
+      '/assets/unn123amed.png'
     ),
     new Products(
       7,
       'Angular Framework',
       'product 7 description',
       1599,
-      '/assets/angular_1200_630.jpg'
+      '/assets/top-20-angularjs-developer-tools.jpg'
     ),
     new Products(
       8,
       'React Framework',
       'product 8 description',
       1899,
-      '/assets/react_16_sized.jpg'
+      '/assets/react-1.jpeg'
     ),
     new Products(
       9,
       'FireBase (Backend)',
       'product 9 description',
       1799,
-      '/assets/social.png'
+      'assets/firebase.png'
     ),
     new Products(
       10,

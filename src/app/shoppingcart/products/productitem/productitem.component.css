@@ -1,0 +1,8 @@
+.card87{
+    transition: 0.3s  ease-in-out;
+}
+.card87:hover{
+    box-shadow: 7px 7px 20px black;
+    transform: scale(1.1);
+
+}

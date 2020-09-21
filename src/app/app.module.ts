@@ -24,6 +24,7 @@ import { CheckComponent } from './check/check.component';
 import { GreetingComponent } from './check/greeting/greeting.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { GreetingComponent } from './check/greeting/greeting.component';
     Homepagefooter12Component,
     CheckComponent,
     GreetingComponent,
+
 
    
 
