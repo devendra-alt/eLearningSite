@@ -21,7 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
 import { Homepagefooter12Component } from './homepagefooter12/homepagefooter12.component';
 import { CheckComponent } from './check/check.component';
-import { CountdownModule } from 'ngx-countdown';
+import { GreetingComponent } from './check/greeting/greeting.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CountdownModule } from 'ngx-countdown';
     Homepagenave12Component,
     Homepagefooter12Component,
     CheckComponent,
-    CountdownModule,
+    GreetingComponent,
+
    
 
   ],

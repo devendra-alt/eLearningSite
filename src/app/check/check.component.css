@@ -8,8 +8,8 @@ input.ng-valid{
     margin-left:70px;
     background-color: darkgreen;
 }
-body{
+.form41  label{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+
 }

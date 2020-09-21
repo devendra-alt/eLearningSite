@@ -13,8 +13,9 @@ import { CheckComponent } from './check/check.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'homenavbar', component: Homepagenave12Component },
-  { path: 'shopnavbar', component: ShopnavComponent },
+  { path: 'shopnavbar', component: ShopnavComponent},
   { path: 'check', component: CheckComponent },
+
 ];
 
 @NgModule({
