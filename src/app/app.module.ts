@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 // Firebase services & enviorment module
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -28,6 +27,21 @@ import { CComponent } from './c/c.component';
 import { HmComponent } from './hm/hm.component';
 import { CommonModule } from '@angular/common';
 import { HtmlComponent } from './html/html.component';
+import { Homepagenave12Component } from 'src/app/homepagenave12/homepagenave12.component';
+import { Homepagefooter12Component} from 'src/app/homepagefooter12/homepagefooter12.component';
+import { MessService} from 'src/app/service/mess.service';
+import { ProductsService} from 'src/app/service/products.service';
+import { ShopheaderComponent } from "src/app/shopheader/shopheader.component";
+import { ShopfooterComponent } from "src/app/shopfooter/shopfooter.component";
+import { ShopnavComponent} from "src/app/shopnav/shopnav.component";
+import { ShoppingcartComponent } from "src/app/shoppingcart/shoppingcart.component";
+import { MainheaderComponent } from "src/app/mainheader/mainheader.component";
+import {FiltersComponent} from "src/app/shoppingcart/filters/filters.component";
+import { CartListComponent } from "src/app/shoppingcart/cart/cart-list/cart-list.component";
+import {ProductsComponent} from "src/app/shoppingcart/products/products.component";
+import { CartComponent } from './shoppingcart/cart/cart.component';
+import { ProfileComponent } from './profile/profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +56,20 @@ import { HtmlComponent } from './html/html.component';
     CComponent,
     AngularComponent,
     HmComponent,
-    HtmlComponent
+    HtmlComponent,
+    Homepagenave12Component,
+    Homepagefooter12Component,
+    ShopheaderComponent,
+    ShopfooterComponent,
+    ShopnavComponent,
+    ShoppingcartComponent,
+    MainheaderComponent,
+    FiltersComponent,
+    ProductsComponent,
+    CartComponent,
+    CartListComponent,
+    MainheaderComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -64,8 +91,10 @@ import { HtmlComponent } from './html/html.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    BrowserAnimationsModule, ],
-  providers: [AuthServiceService],
+    BrowserAnimationsModule, 
+  ],
+
+  providers: [AuthServiceService,MessService,ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

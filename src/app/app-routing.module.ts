@@ -6,22 +6,27 @@ import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from 'src/app/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from 'src/app/verify-email/verify-email.component';
 import { AuthGuard } from './services/auth.guard';
-import { MainheaderComponent } from './mainheader/mainheader.component';
 import { HmComponent } from './hm/hm.component';
 import { CodeComponent } from './code/code.component';
 import { HtmlComponent } from './html/html.component';
 import { CComponent } from './c/c.component';
 import { AngularComponent } from './angular/angular.component';
 import { CppComponent } from './cpp/cpp.component';
-
+import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
+import { ShopnavComponent } from './shopnav/shopnav.component';
+import { ProfileComponent } from "./profile/profile.component";
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent ,canActivate:[AuthGuard],
     children:[
-      {path:'',redirectTo:'home-page',pathMatch:'full'},
-      {path:'home-page',component:MainheaderComponent},
+      {path:'',redirectTo:'home',pathMatch:'full'},
+      {path:'home',component:Homepagenave12Component},
+      { path: 'homenavbar', component: Homepagenave12Component },
+      { path: 'shopnavbar', component: ShopnavComponent},
+      
+   //   {path:'home-page',component:MainheaderComponent},
       {path:'code-section',component:CodeComponent,
         children:[
          {path:'',redirectTo:'code-head',pathMatch:'full'},
@@ -34,6 +39,7 @@ const routes: Routes = [
         ]
           
     },
+    {path:'profile',component:ProfileComponent}
     ]
   },
   { path: 'forgot-password', component: ForgotPasswordComponent },

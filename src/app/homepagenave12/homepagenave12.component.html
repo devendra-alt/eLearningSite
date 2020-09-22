@@ -1,0 +1,28 @@
+<header class="main-header">
+    <div class="div-header">
+        <img src="/assets/logo.png" alt="logo">
+        <h1 style="color:green; font-size: 30px;  position: relative;
+     right:100px; top: 30px;">.Org</h1>
+        <ul>
+            <li><a routerLink='/dashboard/home'>HOME</a></li>
+            <li>
+                <a routerLink="/dashboard/home">CONTACT</a>
+            </li>
+            <li><a routerLink="/dashboard/code-section">EDUCTION</a></li>
+            <li><a routerLink="/dashboard/home">COPYRIGHTS</a></li>
+            <li style="margin-left: 20px;"><button type="button" class="btn btn-outline-success" (click)="authService.SignOut()">Sign-Out</button></li>
+            <button type="button" class="btn btn-primary btn-lg" style="margin-left:50px;" routerLink="/dashboard/shopnavbar">PiedPiper-Shop Ver 0.1
+                Beta
+            </button>
+            <button class="btn btn-dark" routerLink="/dashboard/profile">User Data</button>
+        </ul>
+
+
+    </div>
+</header>
+<main>
+    <app-mainheader></app-mainheader>
+</main>
+<footer>
+    <app-homepagefooter12></app-homepagefooter12>
+</footer>

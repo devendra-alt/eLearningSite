@@ -1,0 +1,14 @@
+<div class="card card87" style="margin-bottom: 35px;">
+    <img class="card-img-top" [src]="productsItem.imageUrl" alt="Card image cap" style="height: 250px;">
+    <div class="card-body">
+        <p class="card-text"><strong>Price:{{ productsItem.price | currency:'INR'}}</strong></p>
+        <h4 class="card-title"><a href="product.html" title="View Product">{{productsItem.name}}</a></h4>
+        <p class="card-text">{{productsItem.description}}.</p>
+        <div class="row">
+            <button type="button" class="btn btn-md btn-outline-primary active" (click)="handlecart()">Add to
+                cart</button>
+            &nbsp;
+            <button type="button" class="btn btn-md btn-outline-secondary">View Details</button>
+        </div>
+    </div>
+</div>

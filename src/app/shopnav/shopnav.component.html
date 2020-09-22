@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <app-shopheader></app-shopheader>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/dashboard/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+    <a routerLink="/list"> <img src="/assets/order.svg" style="height: 40px; width: 40px;"></a>
+</nav>
+<main>
+    <div class="row ">
+        <div class="col">
+            <app-filters></app-filters>
+        </div>
+        <div class="col-md-8">
+            <app-products></app-products>
+        </div>
+        <div class="col">
+            <app-cart></app-cart>
+        </div>
+    </div>
+</main>
+<footer>
+    <app-shopfooter></app-shopfooter>
+</footer>

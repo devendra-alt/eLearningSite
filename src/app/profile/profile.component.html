@@ -1,0 +1,19 @@
+<div>
+    <div class="jumbotron" id="fram" *ngIf="authService.userData as user">
+        <div class="text-center">
+            <img src="/assets/download.jfif" alt="logo">
+            <br>
+            <br>
+            <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+            <p>User ID: <strong>{{user.uid}}</strong></p>
+            <p>Email: <strong>{{user.email}}</strong></p>
+            <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+            <a class="nav-link" routerLink="/dashboard">
+                <i class="fas fa-user"></i>Go back to home
+            </a>
+            <a class="btn btn-dark" (click)="authService.SignOut()">
+                <i class="fas fa-sign-out-alt"></i>Log out
+            </a>
+        </div>
+    </div>
+</div>
