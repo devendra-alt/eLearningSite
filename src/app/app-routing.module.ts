@@ -1,3 +1,5 @@
+import { GreetingComponent } from './greeting/greeting.component';
+import { CheckComponent } from './check/check.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ChildActivationEnd } from '@angular/router';
 import { SignInComponent } from 'src/app/sign-in/sign-in.component';
@@ -25,6 +27,9 @@ const routes: Routes = [
       {path:'home',component:Homepagenave12Component},
       { path: 'homenavbar', component: Homepagenave12Component },
       { path: 'shopnavbar', component: ShopnavComponent},
+      {path:'check' ,component:CheckComponent},
+
+    {path:'greeting', component:GreetingComponent},
       
    //   {path:'home-page',component:MainheaderComponent},
       {path:'code-section',component:CodeComponent,
@@ -36,6 +41,7 @@ const routes: Routes = [
           {path:'css',component:CComponent},
           {path:'angular',component:AngularComponent},
           {path:'cpp',component:CppComponent},
+
         ]
           
     },
