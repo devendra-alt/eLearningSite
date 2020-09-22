@@ -1,3 +1,4 @@
+import { ProductitemComponent } from './shoppingcart/products/productitem/productitem.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -42,6 +43,7 @@ import {ProductsComponent} from "src/app/shoppingcart/products/products.componen
 import { CartComponent } from './shoppingcart/cart/cart.component';
 import { ProfileComponent } from './profile/profile.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +71,9 @@ import { ProfileComponent } from './profile/profile.component';
     CartComponent,
     CartListComponent,
     MainheaderComponent,
-    ProfileComponent
+    
+    ProfileComponent,
+    ProductitemComponent,
   ],
   imports: [
     BrowserModule,
