@@ -1,0 +1,59 @@
+<div class="card text-center"
+    style="width: 500px; height:auto; position: relative; margin: auto; top:150px; background-color: gold    ; font-family: 'Bitter',serif; font-weight: bold; border-radius: 20px;">
+    <div class="card-header" style="font-size: 2rem;">
+        Checkout
+    </div>
+    <div class="card-body form41" style="width:500px;">
+        <form #coursesform="ngForm" novalidate style="font-family: 'Bitter',serif;">
+            <div class="form-group">
+                <label for="form-title" style="display: flex; justify-content: left;">Email-Id</label>
+                <input name="email" #emailtitle="ngModel" type="text" class="form-control" ngModel required>
+                <div [hidden]="emailtitle.valid || emailtitle.pristine" class="alert alert-danger">
+                    Please enter your Email-Id.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="form-title">First Name</label>
+                <input name="form" #formtitle="ngModel" type="text" class="form-control" ngModel required>
+                <div [hidden]="formtitle.valid || formtitle.pristine" class="alert alert-danger">
+                    Please enter your First Name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="form-title">Last Name</label>
+                <input name="form1" #formtitle1="ngModel" type="text" class="form-control" ngModel required>
+                <div [hidden]="formtitle1.valid || formtitle1.pristine" class="alert alert-danger">
+                    Please enter Last Name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <span class="input-group-addon"></span>
+                <input name="phone" #phonefo="ngModel" required type="number" class="form-control" ngModel>
+                <div [hidden]="phonefo.valid || phonefo.pristine" class="alert alert-danger">
+                    Please enter Your phone Number.
+                </div>
+            </div>
+            <br>
+
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input"
+                    checked>
+                <label class="custom-control-label" for="customRadioInline1">Net Banking</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Paytm Wallet</label>
+            </div>
+            <br>
+            <br>
+
+        </form>
+
+    </div>
+    <div class="card-footer text-muted">
+        <button class="btn btn-primary" type="submit" [disabled]="!coursesform.form.valid "
+            routerLink="/dashboard/greeting">Checkout</button>&nbsp; &nbsp;
+        <button class="btn btn-danger" type="submit" routerLink="/dashboard/shopnavbar">Go Back</button>
+    </div>
+</div>

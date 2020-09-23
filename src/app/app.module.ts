@@ -1,3 +1,4 @@
+import { ProductitemComponent } from './shoppingcart/products/productitem/productitem.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -41,6 +42,10 @@ import { CartListComponent } from "src/app/shoppingcart/cart/cart-list/cart-list
 import {ProductsComponent} from "src/app/shoppingcart/products/products.component";
 import { CartComponent } from './shoppingcart/cart/cart.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CheckComponent } from './check/check.component';
+import { FormsModule } from '@angular/forms';
+import { GreetingComponent } from './greeting/greeting.component';
+
 
 @NgModule({
   declarations: [
@@ -69,7 +74,10 @@ import { ProfileComponent } from './profile/profile.component';
     CartComponent,
     CartListComponent,
     MainheaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProductitemComponent,
+    CheckComponent,
+    GreetingComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +91,8 @@ import { ProfileComponent } from './profile/profile.component';
     MatSidenavModule,
     MatListModule,
     BrowserAnimationsModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
 
   ],
   exports: [MatButtonModule,MatToolbarModule,
@@ -92,6 +101,7 @@ import { ProfileComponent } from './profile/profile.component';
     MatSidenavModule,
     MatListModule,
     BrowserAnimationsModule, 
+
   ],
 
   providers: [AuthServiceService,MessService,ProductsService],

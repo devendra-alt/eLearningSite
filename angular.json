@@ -142,5 +142,8 @@
       }
     }
   },
-  "defaultProject": "e-LearningSite"
+  "defaultProject": "e-LearningSite",
+  "cli": {
+    "analytics": "d00e6cce-76a9-4c5e-b6ef-61cc1c21aace"
+  }
 }

@@ -112,13 +112,14 @@
     align-items: center;
     border-radius: 20px;
     justify-content: space-around;
+   
 }
 
 .pp-icon {
     position: relative;
     width: 90px;
     height: 90px;
-    bottom: 3px;
+    bottom: 15px;
     left: 70px;
 }
 
@@ -138,7 +139,7 @@
     bottom: 50px;
     font-size: 2rem;
     line-height: 120px;
-    box-shadow: -3px 20px 0px #004102;
+    box-shadow: 0px 20px 0px #004102;
     border-radius: 5px;
     transition: 0.1s all linear;
 }
