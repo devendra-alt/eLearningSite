@@ -45,6 +45,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CheckComponent } from './check/check.component';
 import { FormsModule } from '@angular/forms';
 import { GreetingComponent } from './greeting/greeting.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { GreetingComponent } from './greeting/greeting.component';
     ProductitemComponent,
     CheckComponent,
     GreetingComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

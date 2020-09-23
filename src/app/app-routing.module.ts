@@ -17,6 +17,7 @@ import { CppComponent } from './cpp/cpp.component';
 import { Homepagenave12Component } from './homepagenave12/homepagenave12.component';
 import { ShopnavComponent } from './shopnav/shopnav.component';
 import { ProfileComponent } from "./profile/profile.component";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
@@ -49,7 +50,8 @@ const routes: Routes = [
     ]
   },
   { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'verify-email-address', component: VerifyEmailComponent }
+  { path: 'verify-email-address', component: VerifyEmailComponent },
+  {path:'**',component:PageNotFoundComponent}
 ];
 
 @NgModule({
