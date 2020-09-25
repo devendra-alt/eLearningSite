@@ -18,21 +18,23 @@ import { Homepagenave12Component } from './homepagenave12/homepagenave12.compone
 import { ShopnavComponent } from './shopnav/shopnav.component';
 import { ProfileComponent } from "./profile/profile.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { PdfsComponent } from './pdfs/pdfs.component';
+import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent ,canActivate:[AuthGuard],
     children:[
-      {path:'',redirectTo:'home',pathMatch:'full'},
-      {path:'home',component:Homepagenave12Component},
+      { path:'',redirectTo:'home',pathMatch:'full'},
+      { path:'home',component:Homepagenave12Component},
       { path: 'homenavbar', component: Homepagenave12Component },
       { path: 'shopnavbar', component: ShopnavComponent},
-      {path:'check' ,component:CheckComponent},
-
-    {path:'greeting', component:GreetingComponent},
-      
-   //   {path:'home-page',component:MainheaderComponent},
+      { path:'check' ,component:CheckComponent},
+      { path:'greeting', component:GreetingComponent},
+      { path:'pdf',component:PdfsComponent},
+      { path:'about',component:AboutComponent},
+    //   {path:'home-page',component:MainheaderComponent},
       {path:'code-section',component:CodeComponent,
         children:[
          {path:'',redirectTo:'code-head',pathMatch:'full'},

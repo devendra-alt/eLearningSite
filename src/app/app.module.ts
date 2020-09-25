@@ -46,8 +46,8 @@ import { CheckComponent } from './check/check.component';
 import { FormsModule } from '@angular/forms';
 import { GreetingComponent } from './greeting/greeting.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
+import { PdfsComponent } from './pdfs/pdfs.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,6 +80,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CheckComponent,
     GreetingComponent,
     PageNotFoundComponent,
+    PdfsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,7 +105,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatSidenavModule,
     MatListModule,
     BrowserAnimationsModule, 
-
   ],
 
   providers: [AuthServiceService,MessService,ProductsService],
