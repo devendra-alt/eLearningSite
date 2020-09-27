@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 ## environments for ELearningSite
-you have to add enivrments file to project before run it and confing firebase api from firebase web server 
+you have to add environment file to project before run it and confing firebase api from firebase web server 
 
 ## Development server
 
